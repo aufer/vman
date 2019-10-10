@@ -1,0 +1,36 @@
+Arguments: 
+  /Users/andre.ufer/.nvm/versions/node/v10.16.2/bin/node /Users/andre.ufer/.yarn/bin/yarn.js init
+
+PATH: 
+  /Users/andre.ufer/.nvm/versions/node/v10.16.2/bin:/Users/andre.ufer/.yarn/bin:/Users/andre.ufer/.config/yarn/global/node_modules/.bin:/Users/andre.ufer/ws/_tools/ghe:/Users/andre.ufer/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/andre.ufer/privat/repos/vereinsmanager/node_modules/.bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  10.16.2
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/Users/andre.ufer/.yarn/lib/cli.js:136724:13)
+      at Interface.emit (events.js:198:13)
+      at Interface._ttyWrite (readline.js:801:16)
+      at ReadStream.onkeypress (readline.js:184:10)
+      at ReadStream.emit (events.js:198:13)
+      at emitKeys (internal/readline.js:424:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1075:36)
+      at ReadStream.emit (events.js:198:13)
+      at addChunk (_stream_readable.js:288:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

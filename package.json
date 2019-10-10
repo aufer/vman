@@ -1,0 +1,25 @@
+{
+  "name": "vereinsmanager",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ],
+    "nohoist": [
+      "**/@angular*",
+      "**/@angular*/**",
+      "**/@ngrx*",
+      "**/@ngrx*/**",
+      "**/@types/**",
+      "**/@vereinsmanager*",
+      "**/reflect-metadata"
+    ]
+  },
+  "scripts": {
+    "start:dev": "pm2 start ecosystem.config.js"
+  },
+  "devDependencies": {
+    "lerna": "^3.16.5",
+    "typescript": "^3.6.4"
+  }
+}

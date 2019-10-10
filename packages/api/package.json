@@ -1,0 +1,29 @@
+{
+  "name": "@vereinsmanager/api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./lib/index",
+  "types": "./lib/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -b"
+  },
+  "files": [
+    "lib"
+  ],
+  "watch": {
+    "test": {
+      "extensions": [
+        "ts"
+      ],
+      "patterns": [
+        "src/"
+      ],
+      "quiet": true
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+  }
+}
