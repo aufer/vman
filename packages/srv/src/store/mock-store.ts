@@ -1,6 +1,6 @@
 import { VmResource } from '../utils';
 import { Injectable } from '@nestjs/common';
-import { Store } from '../store';
+import { Store } from './index';
 
 @Injectable()
 export class MockStore<T extends VmResource> implements Store<T> {

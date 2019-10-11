@@ -1,5 +1,5 @@
 import { VmResource } from '../utils';
-import { MockStore } from '../mocks/mock-store';
+import { MockStore } from './mock-store';
 
 export const STORE = 'STORE';
 
