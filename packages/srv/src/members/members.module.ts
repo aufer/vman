@@ -1,13 +1,15 @@
 import { Module } from '@nestjs/common';
 import { Member } from '@vereinsmanager/api/lib';
 import { MembersController } from './members.controller';
-import { storeProviderFactory } from '../store';
+import { StoreModule } from '../store/store.module';
 
 @Module({
-  providers: [
-    storeProviderFactory<Member>(),
+  imports: [
+    StoreModule.register<Member>(Member),
   ],
-  controllers: [MembersController],
+  controllers: [
+    MembersController,
+  ],
 })
 export class MembersModule {
 }

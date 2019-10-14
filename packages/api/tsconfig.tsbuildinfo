@@ -1,3 +1,128 @@
 {
+  "program": {
+    "fileInfos": {
+      "../../node_modules/typescript/lib/lib.d.ts": {
+        "version": "49ff9798f592c8b7e628fd881401e68810c1b3589ecd7a41b32b3c287374cde0",
+        "signature": "49ff9798f592c8b7e628fd881401e68810c1b3589ecd7a41b32b3c287374cde0"
+      },
+      "../../node_modules/typescript/lib/lib.es5.d.ts": {
+        "version": "ff5688d6b2fcfef06842a395d7ff4d5730d45b724d4c48913118c889829052a1",
+        "signature": "ff5688d6b2fcfef06842a395d7ff4d5730d45b724d4c48913118c889829052a1"
+      },
+      "../../node_modules/typescript/lib/lib.dom.d.ts": {
+        "version": "2d53f3741e5a4f78a90f623387d71a1cc809bb258f10cdaec034b67cbf71022f",
+        "signature": "2d53f3741e5a4f78a90f623387d71a1cc809bb258f10cdaec034b67cbf71022f"
+      },
+      "../../node_modules/typescript/lib/lib.webworker.importscripts.d.ts": {
+        "version": "fe4e59403e34c7ff747abe4ff6abbc7718229556d7c1a5b93473fb53156c913b",
+        "signature": "fe4e59403e34c7ff747abe4ff6abbc7718229556d7c1a5b93473fb53156c913b"
+      },
+      "../../node_modules/typescript/lib/lib.scripthost.d.ts": {
+        "version": "b9faa17292f17d2ad75e34fac77dd63a6403af1dba02d39cd0cbb9ffdf3de8b9",
+        "signature": "b9faa17292f17d2ad75e34fac77dd63a6403af1dba02d39cd0cbb9ffdf3de8b9"
+      },
+      "./src/model/address.model.ts": {
+        "version": "d1570222bda02eeffd6590aed36301b353937b92b90ab22cbe5cf9bb6581d096",
+        "signature": "87091c7ddfb6f9a6eef40496ae0381d2d1d75bd1dd980583829b6a9fc65d393d"
+      },
+      "./src/model/appointment.model.ts": {
+        "version": "8dbe1c907906c53b3d7daa0fa63f25ea0f11dc8f5d658f247ac914a8c623046a",
+        "signature": "4e2bb0ca4da432af34211199b5737ce9eb8376b6477e01aa28fdf922da8ed252"
+      },
+      "./src/model/bank-account.model.ts": {
+        "version": "3468dd5a6452565cb5929e336eadc8598421485a5c594359b38a78183db61508",
+        "signature": "fb3b10f908fa660883a4f6c4cc9663cb9bad3f0bf1241798328b557db890b384"
+      },
+      "./src/model/member.model.ts": {
+        "version": "724dcea870b825f709582a9cc84c80a157b8b3254a4975e306eaf466e7a25e7e",
+        "signature": "868bd53364a6a4515e22866e784b38f64672882833edb9c065ff3411a63d1202"
+      },
+      "./src/model/user.ts": {
+        "version": "f19babbb9ba0aabc730092d5ec47d04889cf3d6e30ac036cc4cc3f7da01f52b3",
+        "signature": "56af1d34f61d26ab9a377756e2fc73fa4b0dcd72ad3b29cccaaf2bca72fa51ed"
+      },
+      "./src/model/index.ts": {
+        "version": "1919eae3543564cf81b5985a2fc75432e6d9097a8756803286b2c82c80808d4c",
+        "signature": "1919eae3543564cf81b5985a2fc75432e6d9097a8756803286b2c82c80808d4c"
+      },
+      "./src/index.ts": {
+        "version": "058a057f55e4828848beeb7dc42fdf38fe8f0e999ea4985b0306f23049d748dc",
+        "signature": "058a057f55e4828848beeb7dc42fdf38fe8f0e999ea4985b0306f23049d748dc"
+      },
+      "./src/model/asset.ts": {
+        "version": "295c8cc1f9d6fa68539c5794b24d44eb52e46ea3ed937dc8105805d60a974151",
+        "signature": "da567358a971991afd16729cbb6033ff9a257c0369ae72c29f83a327140d583c"
+      },
+      "./src/model/document.ts": {
+        "version": "08e3b6865dc5fb831db62146e8e822b59e7913286119e840e02420da7556c5f6",
+        "signature": "0391edad99271d3164e6d48da186ac7ea76cabfd9365e92aaf52db363186448d"
+      }
+    },
+    "options": {
+      "target": 1,
+      "module": 1,
+      "declaration": true,
+      "sourceMap": true,
+      "outDir": "./lib",
+      "rootDir": "./src",
+      "strict": true,
+      "composite": true,
+      "configFilePath": "./tsconfig.json"
+    },
+    "referencedMap": {
+      "./src/model/member.model.ts": [
+        "./src/model/address.model.ts",
+        "./src/model/bank-account.model.ts"
+      ],
+      "./src/model/index.ts": [
+        "./src/model/address.model.ts",
+        "./src/model/appointment.model.ts",
+        "./src/model/bank-account.model.ts",
+        "./src/model/member.model.ts",
+        "./src/model/user.ts"
+      ],
+      "./src/index.ts": [
+        "./src/model/index.ts"
+      ],
+      "./src/model/document.ts": [
+        "./src/model/asset.ts"
+      ]
+    },
+    "exportedModulesMap": {
+      "./src/model/member.model.ts": [
+        "./src/model/address.model.ts",
+        "./src/model/bank-account.model.ts"
+      ],
+      "./src/model/index.ts": [
+        "./src/model/address.model.ts",
+        "./src/model/appointment.model.ts",
+        "./src/model/bank-account.model.ts",
+        "./src/model/member.model.ts",
+        "./src/model/user.ts"
+      ],
+      "./src/index.ts": [
+        "./src/model/index.ts"
+      ],
+      "./src/model/document.ts": [
+        "./src/model/asset.ts"
+      ]
+    },
+    "semanticDiagnosticsPerFile": [
+      "../../node_modules/typescript/lib/lib.d.ts",
+      "../../node_modules/typescript/lib/lib.es5.d.ts",
+      "../../node_modules/typescript/lib/lib.dom.d.ts",
+      "../../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
+      "../../node_modules/typescript/lib/lib.scripthost.d.ts",
+      "./src/model/address.model.ts",
+      "./src/model/appointment.model.ts",
+      "./src/model/bank-account.model.ts",
+      "./src/model/user.ts",
+      "./src/model/index.ts",
+      "./src/index.ts",
+      "./src/model/asset.ts",
+      "./src/model/document.ts",
+      "./src/model/member.model.ts"
+    ]
+  },
   "version": "3.6.4"
 }

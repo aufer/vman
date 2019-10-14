@@ -1,4 +1,6 @@
-export interface BankAccount {
-    iban: string;
-    bic: string;
+export class BankAccount {
+  constructor(
+    public iban: string,
+    public bic: string,
+  ) {}
 }

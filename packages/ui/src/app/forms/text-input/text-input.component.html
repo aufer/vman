@@ -1,0 +1,11 @@
+<div class="form-field" [class.form-field--disabled]="disabled">
+    <label class="form-field__label" [for]="name">{{name}}</label>
+    <input class="form-field__input"[type]="type" [id]="name" [class.disabled]="disabled" [formControl]="formControl">
+
+    <div class="form-field__errors" *ngIf="formControl.errors">
+        <span class="form-field__error" *ngFor="let err of formControl.errors">
+            {{err | json}}
+        </span>
+    </div>
+</div>
+

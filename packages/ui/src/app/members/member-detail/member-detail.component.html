@@ -1,0 +1,18 @@
+<h1>Mitglied ändern</h1>
+
+<form [formGroup]="form">
+    <vm-text-input formControlName="id" [disabled]="true" label="ID"></vm-text-input>
+    <vm-text-input formControlName="firstName" label="Vorname"></vm-text-input>
+    <vm-text-input formControlName="lastName" label="Nachname"></vm-text-input>
+    <div formGroupName="address">
+        <vm-text-input formControlName="street" label="Straße"></vm-text-input>
+        <vm-text-input formControlName="houseNumber" label="Hausnr."></vm-text-input>
+        <vm-text-input formControlName="zipCode" label="PLZ"></vm-text-input>
+        <vm-text-input formControlName="city" label="Ort"></vm-text-input>
+    </div>
+    <vm-text-input formControlName="email" label="E-Mail"></vm-text-input>
+    <vm-text-input formControlName="mobileNumber" label="Mobilnummer"></vm-text-input>
+    <vm-text-input formControlName="firstName" label="Vorname"></vm-text-input>
+</form>
+
+<pre>{{form.value | json}}</pre>

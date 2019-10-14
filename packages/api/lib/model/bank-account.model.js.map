@@ -1,1 +1,1 @@
-{"version":3,"file":"bank-account.model.js","sourceRoot":"","sources":["../../src/model/bank-account.model.ts"],"names":[],"mappings":""}
+{"version":3,"file":"bank-account.model.js","sourceRoot":"","sources":["../../src/model/bank-account.model.ts"],"names":[],"mappings":";;AAAA;IACE,qBACS,IAAY,EACZ,GAAW;QADX,SAAI,GAAJ,IAAI,CAAQ;QACZ,QAAG,GAAH,GAAG,CAAQ;IACjB,CAAC;IACN,kBAAC;AAAD,CAAC,AALD,IAKC;AALY,kCAAW"}

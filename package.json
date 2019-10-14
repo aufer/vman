@@ -1,5 +1,8 @@
 {
   "name": "vereinsmanager",
+  "homepage": "https://github.com/aufer/vman",
+  "author": "Andre Ufer",
+  "email": "andre.ufer@web.de",
   "private": true,
   "workspaces": {
     "packages": [
