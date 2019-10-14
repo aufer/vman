@@ -1,5 +1,5 @@
 export declare class BankAccount {
-    iban: string;
-    bic: string;
-    constructor(iban: string, bic: string);
+    iban?: string | undefined;
+    bic?: string | undefined;
+    constructor(iban?: string | undefined, bic?: string | undefined);
 }

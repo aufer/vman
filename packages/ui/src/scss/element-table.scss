@@ -1,0 +1,23 @@
+.element-table {
+  display: table;
+
+  &__header {
+    display: table-row;
+    background-color: get-from($color-map, secondary);
+    color: get-from($color-map, font, dark);
+    font-weight: bold;
+  }
+
+  &__item {
+    display: table-row;
+
+    &:nth-of-type(odd) {
+      background-color: get-from($color-map, bg, medium);
+    }
+  }
+
+  &__column {
+    display: table-cell;
+    padding: 0.5rem;
+  }
+}

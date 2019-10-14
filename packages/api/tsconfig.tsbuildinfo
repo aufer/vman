@@ -22,20 +22,20 @@
         "signature": "b9faa17292f17d2ad75e34fac77dd63a6403af1dba02d39cd0cbb9ffdf3de8b9"
       },
       "./src/model/address.model.ts": {
-        "version": "d1570222bda02eeffd6590aed36301b353937b92b90ab22cbe5cf9bb6581d096",
-        "signature": "87091c7ddfb6f9a6eef40496ae0381d2d1d75bd1dd980583829b6a9fc65d393d"
+        "version": "f9df7a5bb15d25bd76635cca390ef72a7beb65b24ea229f9b0667df542ccca99",
+        "signature": "e79b47c19fe7839f73eb77e6c8f2f9347ccda23461118160748c6698e3957d41"
       },
       "./src/model/appointment.model.ts": {
         "version": "8dbe1c907906c53b3d7daa0fa63f25ea0f11dc8f5d658f247ac914a8c623046a",
         "signature": "4e2bb0ca4da432af34211199b5737ce9eb8376b6477e01aa28fdf922da8ed252"
       },
       "./src/model/bank-account.model.ts": {
-        "version": "3468dd5a6452565cb5929e336eadc8598421485a5c594359b38a78183db61508",
-        "signature": "fb3b10f908fa660883a4f6c4cc9663cb9bad3f0bf1241798328b557db890b384"
+        "version": "3590c700812d205fc9fdb53b5259948a3d5cf3996b3d2cc933cb7f99422fdfce",
+        "signature": "0271a5179d030e3768bff7a8cb6f574c1acc0cdc2b2bf29e7c5b9aa3c89ecb68"
       },
       "./src/model/member.model.ts": {
-        "version": "724dcea870b825f709582a9cc84c80a157b8b3254a4975e306eaf466e7a25e7e",
-        "signature": "868bd53364a6a4515e22866e784b38f64672882833edb9c065ff3411a63d1202"
+        "version": "1f1c48a168e0d9dba650036808184dd219cb1f2be80d1c205f76fc1aa25778c5",
+        "signature": "41eed851f452aaa1bdfc8369dc6c6c2b611c004a2fe44d313a76251ff917147c"
       },
       "./src/model/user.ts": {
         "version": "f19babbb9ba0aabc730092d5ec47d04889cf3d6e30ac036cc4cc3f7da01f52b3",
@@ -115,13 +115,13 @@
       "../../node_modules/typescript/lib/lib.scripthost.d.ts",
       "./src/model/address.model.ts",
       "./src/model/appointment.model.ts",
-      "./src/model/bank-account.model.ts",
       "./src/model/user.ts",
-      "./src/model/index.ts",
-      "./src/index.ts",
       "./src/model/asset.ts",
       "./src/model/document.ts",
-      "./src/model/member.model.ts"
+      "./src/model/bank-account.model.ts",
+      "./src/model/index.ts",
+      "./src/model/member.model.ts",
+      "./src/index.ts"
     ]
   },
   "version": "3.6.4"

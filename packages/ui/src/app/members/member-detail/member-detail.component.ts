@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Member } from '@vereinsmanager/api';
 import { MembersService } from '../members.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { formGroupFrom } from '../../utils/form-helper';
 
 @Component({
   selector: 'app-member-detail',
@@ -14,19 +15,7 @@ export class MemberDetailComponent implements OnInit {
   form: FormGroup;
 
   constructor(private route: ActivatedRoute, private membersSvc: MembersService, private fb: FormBuilder) {
-    this.form = this.fb.group({
-      id: [''],
-      firstName: [''],
-      lastName: [''],
-      address: this.fb.group({
-        street: [''],
-        houseNumber: [''],
-        zipCode: [''],
-        city: [''],
-      }),
-      email: [''],
-      mobileNumber: [''],
-    });
+    this.form = formGroupFrom(new Member(), fb);
   }
 
   async ngOnInit() {
@@ -34,6 +23,11 @@ export class MemberDetailComponent implements OnInit {
     if (!memberId) return;
     this.member = await this.membersSvc.getById(memberId);
     console.log('Got member', this.member);
-    this.form.setValue(this.member);
+    this.form.patchValue(this.member);
+  }
+
+  updateMember() {
+    console.log('Update member');
+    this.membersSvc.update(this.form.value);
   }
 }

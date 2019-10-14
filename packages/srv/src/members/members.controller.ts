@@ -29,6 +29,7 @@ export class MembersController {
   @Put(':id')
   update(@Param('id') id: string, @Body() member: Member) {
     this.store.update(id, member);
+    return VMResponse.from({id});
   }
 
   @Delete(':id')

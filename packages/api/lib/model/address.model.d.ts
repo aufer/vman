@@ -1,8 +1,8 @@
 export declare class Address {
-    street: string;
-    houseNumber: string;
-    zipCode: string;
-    city: string;
+    street?: string | undefined;
+    houseNumber?: string | undefined;
+    zipCode?: string | undefined;
+    city?: string | undefined;
     country?: string | undefined;
-    constructor(street: string, houseNumber: string, zipCode: string, city: string, country?: string | undefined);
+    constructor(street?: string | undefined, houseNumber?: string | undefined, zipCode?: string | undefined, city?: string | undefined, country?: string | undefined);
 }

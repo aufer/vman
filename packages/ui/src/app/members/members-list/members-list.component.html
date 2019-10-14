@@ -1,12 +1,19 @@
 <h1>Mitglieder</h1>
 
 <div class="element-table">
+    <div class="element-table__header">
+        <div class="element-table__column">ID</div>
+        <div class="element-table__column">Name</div>
+        <div class="element-table__column">E-Mail</div>
+        <div class="element-table__column">Telefon</div>
+        <div class="element-table__column">Aktionen</div>
+    </div>
     <div class="element-table__item" *ngFor="let member of members; let i = index">
-        <div class="elemen-table__column">{{i}}</div>
-        <div class="elemen-table__column">{{member.lastName}}, {{member.firstName}}</div>
-        <div class="elemen-table__column">{{member.email}}</div>
-        <div class="elemen-table__column">{{member.mobileNumber}}</div>
-        <div class="elemen-table__column">
+        <div class="element-table__column">{{i}}</div>
+        <div class="element-table__column">{{member.lastName}}, {{member.firstName}}</div>
+        <div class="element-table__column">{{member.email}}</div>
+        <div class="element-table__column">{{member.mobileNumber}}</div>
+        <div class="element-table__column">
             <button (click)="edit(member)">Edit</button> | <button (click)="delete(member)">Delete</button>
         </div>
     </div>

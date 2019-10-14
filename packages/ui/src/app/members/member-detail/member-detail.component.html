@@ -1,7 +1,7 @@
 <h1>Mitglied ändern</h1>
 
-<form [formGroup]="form">
-    <vm-text-input formControlName="id" [disabled]="true" label="ID"></vm-text-input>
+<form [formGroup]="form" (ngSubmit)="updateMember()">
+    <vm-text-input formControlName="id" [readonly]="true" label="ID"></vm-text-input>
     <vm-text-input formControlName="firstName" label="Vorname"></vm-text-input>
     <vm-text-input formControlName="lastName" label="Nachname"></vm-text-input>
     <div formGroupName="address">
@@ -12,7 +12,16 @@
     </div>
     <vm-text-input formControlName="email" label="E-Mail"></vm-text-input>
     <vm-text-input formControlName="mobileNumber" label="Mobilnummer"></vm-text-input>
-    <vm-text-input formControlName="firstName" label="Vorname"></vm-text-input>
-</form>
+    <vm-text-input formControlName="phoneNumber" label="Telefonnummer"></vm-text-input>
+    <vm-text-input formControlName="birthday" label="Geburtstag"></vm-text-input>
+    <div formGroupName="bankAccount">
+        <vm-text-input formControlName="iban" label="IBAN"></vm-text-input>
+        <vm-text-input formControlName="bic" label="BIC"></vm-text-input>
+    </div>
+    <vm-text-input formControlName="yearlyFee" label="Jahresbeitrag"></vm-text-input>
+    <vm-text-input formControlName="entryAt" label="Beitritt am"></vm-text-input>
+    <vm-text-input formControlName="canceledAt" [readonly]="true" label="Kündigung am"></vm-text-input>
 
-<pre>{{form.value | json}}</pre>
+    <a class="button button--secondary" routerLink="">Zurück</a>
+    <button class="button button--primary" type="submit">Speichern</button>
+</form>

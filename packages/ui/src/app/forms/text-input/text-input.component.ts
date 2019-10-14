@@ -21,6 +21,9 @@ export class TextInputComponent extends BaseFormComponent {
   @Input()
   updateOn;
 
+  @Input()
+  label;
+
   constructor(protected elementRef: ElementRef) {
     super(elementRef);
   }

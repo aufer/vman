@@ -1,0 +1,25 @@
+.button {
+  border: 1px solid;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  font-size: 1rem;
+  font-weight: 700;
+  outline: none;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  appearance: none;
+
+  &--primary {
+    background-color: get-from($color-map, primary);
+    border-color: get-from($color-map, primary);
+    color: get-from($color-map, white);
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border-color: get-from($color-map, primary);
+    color: get-from($color-map, primary);
+  }
+}

@@ -24,11 +24,15 @@ export class MembersService extends EntityService<Member> {
     await this.http.delete(this.endpoint + '/' + id).pipe(map(this.responseHandler)).toPromise();
   }
 
+  async update(member: Member) {
+    await this.http.put(this.endpoint + '/' + member.id, member).pipe(map(this.responseHandler)).toPromise();
+  }
+
   private responseHandler = res => {
     if (res.err) {
       throw new Error(`Error calling ${this.endpoint}`);
     }
 
     return res.data;
-  };
+  }
 }

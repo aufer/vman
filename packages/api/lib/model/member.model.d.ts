@@ -1,17 +1,17 @@
 import { Address } from './address.model';
 import { BankAccount } from './bank-account.model';
 export declare class Member {
-    id: string;
-    firstName: string;
-    lastName: string;
+    id?: string | undefined;
+    firstName?: string | undefined;
+    lastName?: string | undefined;
     address: Address;
-    phoneNumber: string;
-    mobileNumber: string;
-    email: string;
-    birthday: string;
+    phoneNumber?: string | undefined;
+    mobileNumber?: string | undefined;
+    email?: string | undefined;
+    birthday?: string | undefined;
     bankAccount: BankAccount;
-    entry: Date;
-    yearlyFee: number;
-    canceledAt: Date;
-    constructor(id: string, firstName: string, lastName: string, address: Address, phoneNumber: string, mobileNumber: string, email: string, birthday: string, bankAccount: BankAccount, entry: Date, yearlyFee: number, canceledAt: Date);
+    entryAt?: Date | undefined;
+    yearlyFee?: number | undefined;
+    canceledAt?: Date | undefined;
+    constructor(id?: string | undefined, firstName?: string | undefined, lastName?: string | undefined, address?: Address, phoneNumber?: string | undefined, mobileNumber?: string | undefined, email?: string | undefined, birthday?: string | undefined, bankAccount?: BankAccount, entryAt?: Date | undefined, yearlyFee?: number | undefined, canceledAt?: Date | undefined);
 }

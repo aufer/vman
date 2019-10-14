@@ -1,0 +1,31 @@
+.header {
+  background-color: get-from($color-map, primary);
+  border-bottom: 1px solid get-from($color-map, primary);
+  box-shadow: 0 0 6px 1px #aaa;
+  height: 4rem;
+  line-height: 4rem;
+  width: 100%;
+
+  &__nav {
+    display: flex;
+    list-style: none;
+  }
+
+  &__nav-link {
+    display: block;
+    flex: 0 1 0;
+
+    & + & {
+      margin-left: 1rem;
+    }
+
+    a, a:visited, a:active {
+      color: get-from($color-map, white);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}

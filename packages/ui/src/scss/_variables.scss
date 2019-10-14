@@ -1,0 +1,37 @@
+$color-map: (
+  bg: (
+          light: #fff,
+          medium: #ddd,
+          dark: #333,
+          accent: #1a4039
+  ),
+  font: (
+          normal: #333,
+          light: #888,
+          accent: #1a4039
+  ),
+  white: #fff,
+  primary: #28635a,
+  secondary: #50c8b4,
+  accent: #bf7a30,
+  error: #bf4539,
+);
+
+@each $name, $color in map_get($color-map, bg) {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+}
+
+@each $name, $color in map_get($color-map, font) {
+  .font-#{$name} {
+    color: $color;
+  }
+}
+
+@function get-from($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
