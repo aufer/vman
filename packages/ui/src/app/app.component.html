@@ -1,8 +1,10 @@
 <header class="header header--light">
-    <ul class="header__nav">
+    <ul class="header__nav content">
         <li class="header__nav-link"><a [routerLink]="['']">Home</a></li>
         <li class="header__nav-link"><a [routerLink]="['members']">Mitglieder</a></li>
     </ul>
 </header>
 
-<router-outlet></router-outlet>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>
