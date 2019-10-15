@@ -2,10 +2,12 @@
   border: 1px solid;
   border-radius: 0.25rem;
   box-shadow: none;
+  cursor: pointer;
   font-size: 1rem;
   font-weight: 700;
   outline: none;
   padding: 0.75rem 2rem;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 
@@ -23,3 +25,16 @@
     color: get-from($color-map, primary);
   }
 }
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  max-width: 350px;
+  margin: 0 auto;
+
+  .button {
+    flex: 0 1 auto;
+  }
+}
+

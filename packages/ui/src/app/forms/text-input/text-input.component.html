@@ -5,8 +5,8 @@
     </div>
 
     <div class="form-field__errors" *ngIf="formControl.errors">
-        <span class="form-field__error" *ngFor="let err of formControl.errors | keyvalue">
+        <li class="form-field__error" *ngFor="let err of formControl.errors | keyvalue">
             {{err.key}}
-        </span>
+        </li>
     </div>
 </div>

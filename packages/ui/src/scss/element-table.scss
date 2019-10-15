@@ -1,23 +1,33 @@
 .element-table {
+  $self: &;
   display: table;
+  border: 1px solid get-from($color-map, bg, medium);
+  border-radius: 0.25rem;
 
   &__header {
     display: table-row;
-    background-color: get-from($color-map, secondary);
+    background-color: get-from($color-map, primary);
     color: get-from($color-map, font, dark);
-    font-weight: bold;
+    font-weight: 700;
+
+    #{$self}__column {
+      color: white;
+    }
   }
 
   &__item {
     display: table-row;
 
-    &:nth-of-type(odd) {
-      background-color: get-from($color-map, bg, medium);
+    &:last-child {
+      #{$self}__column {
+        border-bottom: none;
+      }
     }
   }
 
   &__column {
     display: table-cell;
-    padding: 0.5rem;
+    padding: 0.75rem;
+    border-bottom: 1px solid get-from($color-map, bg, medium);
   }
 }

@@ -2,12 +2,15 @@ import { ControlValueAccessor, FormControl, Validators } from '@angular/forms';
 import { ElementRef, Input, OnInit } from '@angular/core';
 
 export abstract class BaseFormComponent implements ControlValueAccessor, OnInit {
-  onChange: any = () => {};
-  onTouched: any = () => {};
+  onChange: any = () => {
+  };
+  onTouched: any = () => {
+  };
 
   formControl: FormControl;
 
   private _disabled: boolean;
+
   @Input()
   set readonly(disabled: boolean) {
     this._disabled = disabled;
@@ -19,7 +22,14 @@ export abstract class BaseFormComponent implements ControlValueAccessor, OnInit 
   }
 
   protected constructor(protected elem: ElementRef, protected updateEvent: 'blur' | 'change' = 'change') {
-    this.formControl = new FormControl(null, {validators: [Validators.required], updateOn: updateEvent});
+    this.formControl = new FormControl(null, {
+      validators: [
+        Validators.required,
+        Validators.maxLength(100),
+        Validators.minLength(1),
+      ],
+      updateOn: updateEvent,
+    });
   }
 
   ngOnInit(): void {

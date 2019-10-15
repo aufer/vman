@@ -14,7 +14,7 @@ $color-map: (
   primary: #28635a,
   secondary: #50c8b4,
   accent: #bf7a30,
-  error: #bf4539,
+  error: #ef3f2e,
 );
 
 @each $name, $color in map_get($color-map, bg) {

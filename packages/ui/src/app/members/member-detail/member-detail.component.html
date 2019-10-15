@@ -22,6 +22,8 @@
     <vm-text-input formControlName="entryAt" label="Beitritt am"></vm-text-input>
     <vm-text-input formControlName="canceledAt" [readonly]="true" label="Kündigung am"></vm-text-input>
 
-    <a class="button button--secondary" routerLink="">Zurück</a>
-    <button class="button button--primary" type="submit">Speichern</button>
+    <div class="button-container">
+        <button class="button button--primary" type="submit">Speichern</button>
+        <a class="button button--secondary" routerLink="">Zurück</a>
+    </div>
 </form>
