@@ -1,7 +1,41 @@
+@mixin col-margin {
+  margin: 0 1%;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
 .grid {
   display: flex;
 
   .col {
-    flex: 0 1 auto;
+    flex: 1;
+    width: 46%;
+    @include col-margin;
+
+    &-20 {
+      @include col-margin;
+      width: calc(100% / 5 - 1%);
+    }
+
+    &-33 {
+      @include col-margin;
+      width: calc(100% / 3 - 1%);
+    }
+
+    &-66 {
+      @include col-margin;
+      width: calc(100% / 3 * 2 - 1%);
+    }
+
+    &-80 {
+      @include col-margin;
+      width: calc(100% / 5 * 4 - 1%);
+    }
   }
 }

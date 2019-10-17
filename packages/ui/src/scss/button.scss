@@ -24,6 +24,19 @@
     border-color: get-from($color-map, primary);
     color: get-from($color-map, primary);
   }
+
+  &--link {
+    background-color: transparent;
+    border: none;
+    color: get-from($color-map, accent);
+    text-transform: none;
+    padding: 0.5rem 0;
+    margin: 0 1rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .button-container {

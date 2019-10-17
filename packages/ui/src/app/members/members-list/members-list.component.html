@@ -1,4 +1,4 @@
-<h1>Mitglieder</h1>
+<h1>Mitglieder <span class="headline--link"><a class="button button--link">+ anlegen</a></span></h1>
 
 <div class="element-table">
     <div class="element-table__header">
@@ -14,7 +14,7 @@
         <div class="element-table__column">{{member.email}}</div>
         <div class="element-table__column">{{member.mobileNumber}}</div>
         <div class="element-table__column">
-            <button (click)="edit(member)">Edit</button> | <button (click)="delete(member)">Delete</button>
+            <a (click)="edit(member)" class="button button--link">Edit</a>  <a (click)="delete(member)" class="button button--link">Delete</a>
         </div>
     </div>
 </div>

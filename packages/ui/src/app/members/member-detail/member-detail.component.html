@@ -2,22 +2,32 @@
 
 <form [formGroup]="form" (ngSubmit)="updateMember()">
     <vm-text-input formControlName="id" [readonly]="true" label="ID"></vm-text-input>
-    <vm-text-input formControlName="firstName" label="Vorname"></vm-text-input>
-    <vm-text-input formControlName="lastName" label="Nachname"></vm-text-input>
-    <div formGroupName="address">
-        <vm-text-input formControlName="street" label="Straße"></vm-text-input>
-        <vm-text-input formControlName="houseNumber" label="Hausnr."></vm-text-input>
-        <vm-text-input formControlName="zipCode" label="PLZ"></vm-text-input>
-        <vm-text-input formControlName="city" label="Ort"></vm-text-input>
+    <h2>Anschrift</h2>
+    <div class="grid">
+        <vm-text-input class="col" formControlName="firstName" label="Vorname"></vm-text-input>
+        <vm-text-input class="col" formControlName="lastName" label="Nachname"></vm-text-input>
     </div>
+    <div formGroupName="address">
+        <div class="grid">
+            <vm-text-input class="col-80" formControlName="street" label="Straße"></vm-text-input>
+            <vm-text-input class="col-20" formControlName="houseNumber" label="Hausnr."></vm-text-input>
+        </div>
+        <div class="grid">
+            <vm-text-input class="col-33" formControlName="zipCode" label="PLZ"></vm-text-input>
+            <vm-text-input class="col-66" formControlName="city" label="Ort"></vm-text-input>
+        </div>
+    </div>
+    <h2>Kontaktdaten</h2>
     <vm-text-input formControlName="email" label="E-Mail"></vm-text-input>
     <vm-text-input formControlName="mobileNumber" label="Mobilnummer"></vm-text-input>
     <vm-text-input formControlName="phoneNumber" label="Telefonnummer"></vm-text-input>
     <vm-text-input formControlName="birthday" label="Geburtstag"></vm-text-input>
+    <h2>Bankdaten</h2>
     <div formGroupName="bankAccount">
         <vm-text-input formControlName="iban" label="IBAN"></vm-text-input>
         <vm-text-input formControlName="bic" label="BIC"></vm-text-input>
     </div>
+    <h2>Mitgliedschaft</h2>
     <vm-text-input formControlName="yearlyFee" label="Jahresbeitrag"></vm-text-input>
     <vm-text-input formControlName="entryAt" label="Beitritt am"></vm-text-input>
     <vm-text-input formControlName="canceledAt" [readonly]="true" label="Kündigung am"></vm-text-input>
