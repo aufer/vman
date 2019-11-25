@@ -19,7 +19,8 @@
     ]
   },
   "scripts": {
-    "start:dev": "pm2 start ecosystem.config.js"
+    "start:dev": "pm2 start ecosystem.config.js",
+    "start:mongo": "mkdir -p $HOME/ws/mongodb/databases/vman && mongod --dbpath $HOME/ws/mongodb/databases/vman"
   },
   "devDependencies": {
     "lerna": "^3.16.5",

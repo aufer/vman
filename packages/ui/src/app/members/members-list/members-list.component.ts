@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Member } from '@vereinsmanager/api';
-import { MembersService } from '../members.service';
+import { Store } from '@ngrx/store';
+import { deleteMember, loadMembers } from '../members.actions';
+import { map, tap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { MembersState } from '../members.reducer';
 
 @Component({
   selector: 'app-members-list-component',
@@ -9,12 +13,13 @@ import { MembersService } from '../members.service';
   styleUrls: ['./members-list.component.scss'],
 })
 export class MembersListComponent implements OnInit {
-  members: Member[];
+  members$: Observable<Member[]> = this.store.pipe(tap(s => console.log('LIST', s)), map(s => s.members.all));
 
-  constructor(private membersSvc: MembersService, private router: Router) {}
+  constructor(private store: Store<{members: MembersState}>, private router: Router) {
+    store.dispatch(loadMembers());
+  }
 
   async ngOnInit() {
-    this.members = await this.membersSvc.getAll();
   }
 
   edit(member: Member) {
@@ -22,6 +27,6 @@ export class MembersListComponent implements OnInit {
   }
 
   delete(member: Member) {
-    this.membersSvc.delete(member.id);
+    this.store.dispatch(deleteMember({member}));
   }
 }

@@ -12,24 +12,29 @@ export class MembersService extends EntityService<Member> {
     super(http);
   }
 
-  async getAll() {
-    return await this.http.get(this.endpoint).pipe(map(this.responseHandler)).toPromise();
+  getAll() {
+    return this.http.get(this.endpoint).pipe(map(this.responseHandler));
   }
 
-  async getById(id: string) {
-    return await this.http.get(this.endpoint + '/' + id).pipe(map(this.responseHandler)).toPromise();
+  getById(id: string) {
+    return this.http.get(this.endpoint + '/' + id).pipe(map(this.responseHandler));
   }
 
-  async delete(id: string) {
-    await this.http.delete(this.endpoint + '/' + id).pipe(map(this.responseHandler)).toPromise();
+  delete(id: string) {
+    this.http.delete(this.endpoint + '/' + id).pipe(map(this.responseHandler));
   }
 
-  async update(member: Member) {
-    await this.http.put(this.endpoint + '/' + member.id, member).pipe(map(this.responseHandler)).toPromise();
+  add(member: Member) {
+    this.http.post(this.endpoint, member).pipe(map(this.responseHandler));
+  }
+
+  update(member: Member) {
+    return this.http.put(this.endpoint + '/' + member.id, member).pipe(map(this.responseHandler));
   }
 
   private responseHandler = res => {
-    if (res.err) {
+    console.log('RESPONSE_HANDLER', res);
+    if (res && res.err) {
       throw new Error(`Error calling ${this.endpoint}`);
     }
 

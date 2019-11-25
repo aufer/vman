@@ -1,4 +1,6 @@
-<h1>Mitglieder <span class="headline--link"><a class="button button--link">+ anlegen</a></span></h1>
+<h1>
+    Mitglieder <span class="headline--link"><a class="button button--link" [routerLink]="['new']">+ anlegen</a></span>
+</h1>
 
 <div class="element-table">
     <div class="element-table__header">
@@ -8,13 +10,16 @@
         <div class="element-table__column">Telefon</div>
         <div class="element-table__column">Aktionen</div>
     </div>
-    <div class="element-table__item" *ngFor="let member of members; let i = index">
+    <div class="element-table__item" *ngFor="let member of members$ | async; let i = index">
         <div class="element-table__column">{{i}}</div>
         <div class="element-table__column">{{member.lastName}}, {{member.firstName}}</div>
         <div class="element-table__column">{{member.email}}</div>
         <div class="element-table__column">{{member.mobileNumber}}</div>
         <div class="element-table__column">
-            <a (click)="edit(member)" class="button button--link">Edit</a>  <a (click)="delete(member)" class="button button--link">Delete</a>
+            <a (click)="edit(member)" class="button button--link">Edit</a> <a (click)="delete(member)"
+                                                                              class="button button--link">Delete</a>
         </div>
     </div>
 </div>
+
+<pre>{{(members$ | async) | json}}</pre>

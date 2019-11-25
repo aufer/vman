@@ -1,6 +1,6 @@
-<h1>Mitglied ändern</h1>
+<h1>Mitglied {{member?.id ? 'ändern' : 'hinzufügen'}}</h1>
 
-<form [formGroup]="form" (ngSubmit)="updateMember()">
+<form [formGroup]="form" (ngSubmit)="saveChanges()">
     <vm-text-input formControlName="id" [readonly]="true" label="ID"></vm-text-input>
     <h2>Anschrift</h2>
     <div class="grid">

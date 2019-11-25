@@ -5,12 +5,11 @@ import { VMResponse } from '../utils';
 
 @Controller('appointments')
 export class AppointmentController {
-  constructor(@Inject(STORE) private store: Store<Appointment>) {
-  }
+  constructor(@Inject(STORE) private store: Store<Appointment>) {}
 
   @Get()
-  findAll(): VMResponse.of<Appointment[]> {
-    return VMResponse.from([]);
+  async findAll(): VMResponse.of<Appointment[]> {
+    return VMResponse.from(await this.store.findAll());
   }
 
   @Get(':id')
